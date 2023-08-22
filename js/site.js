@@ -54,8 +54,11 @@ function calculate() {
 		}
 	});
 	
-	if (magAmount.toString().length > 6 && magAmount.toString().length < 9) {
-		magAmount = Math.floor(magAmount/1e6);
+
+	if (magAmount.toString().length < 6){
+		ek = '';
+	} else if (magAmount.toString().length < 9){
+		magAmount = magAmount/1e6;
 		ek = 'a';
 	} else if (magAmount.toString().length < 12){
 		magAmount = Math.floor(magAmount/1e9);
