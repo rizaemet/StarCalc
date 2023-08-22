@@ -56,7 +56,7 @@ function calculate() {
 	
 	console.log(Math.floor(magAmount/1e6));
 	if (magAmount.length > 6 ) {
-		console.log('Elma');
+		console.log('Basamak:'+magAmount.length);
 		magAmount = Math.floor(magAmount/1e6);
 	}
 		
