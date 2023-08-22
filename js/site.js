@@ -56,7 +56,7 @@ function calculate() {
 	});
 
 	//if (magAmount >=1000000 && magAmount <=1000000000) {
-		//magAmount = magAmount%1000000;
+		magAmount = Math.floor(magAmount/1000000);
 
 	//}
 		
