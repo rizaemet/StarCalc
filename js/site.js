@@ -53,11 +53,12 @@ function calculate() {
 			fragmentAmount += fragmentCost(index, scrapyardMul);
 		}
 	});
+	
 	console.log(Math.floor(magAmount/1e6));
-	if (magAmount.length > 6 ) {
+	//if (magAmount.length > 6 ) {
 		console.log('Elma');
 		magAmount = Math.floor(magAmount/1e6);
-	}
+	//}
 		
 	
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
