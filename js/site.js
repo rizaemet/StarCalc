@@ -41,7 +41,6 @@ function calculate() {
 
 
 	var desired = document.getElementById("target").value;
-	var magA;
 	var gsAmount = 0;
 	var magAmount = 0;
 	var fragmentAmount = 0;
@@ -55,10 +54,9 @@ function calculate() {
 		}
 	});
 
-	//if (magAmount >=1000000 && magAmount <=1000000000) {
+	if (magAmount >=1000000 && magAmount <=1000000000) {
 		magAmount = Math.floor(magAmount/1000000);
-
-	//}
+	}
 		
 	
 	
