@@ -57,14 +57,13 @@ function calculate() {
 
 	//if (magAmount >=1000000 && magAmount <=1000000000) {
 		magAmount = magAmount%1000000;
-		magA = magAmount.toLocaleString()+' a';
+
 	//}
 		
 	
 	
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = magA;
-//	document.getElementById("mag").innerHTML = magAmount.toLocaleString();
+	document.getElementById("mag").innerHTML = magAmount.toLocaleString() + ' a';
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
 
