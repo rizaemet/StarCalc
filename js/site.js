@@ -54,11 +54,10 @@ function calculate() {
 		}
 	});
 
-	if (magAmount >=1000000 && magAmount <=1000000000) {
+	if (magAmount > 1e6 && magAmount < 1e9) {
 		magAmount = Math.floor(magAmount/1000000);
 	}
 		
-	
 	
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
 	document.getElementById("mag").innerHTML = magAmount.toLocaleString() + ' a';
