@@ -54,16 +54,34 @@ function calculate() {
 		}
 	});
 	
-	console.log(Math.floor(magAmount/1e6));
-	console.log('Basamak:'+magAmount.toString().length);
-	if (magAmount.toString().length > 6 ) {
-		console.log('Basamak:'+magAmount.toString().length);
+	if (magAmount.toString().length > 6 && magAmount.toString().length < 9) {
 		magAmount = Math.floor(magAmount/1e6);
+		ek = 'a';
+	} else if (magAmount.toString().length < 12){
+		magAmount = Math.floor(magAmount/1e9);
+		ek = 'b';
+	} else if (magAmount.toString().length < 15){
+		magAmount = Math.floor(magAmount/1e12);
+		ek = 'c';
+	} else if (magAmount.toString().length < 18){
+		magAmount = Math.floor(magAmount/1e15);
+		ek = 'd';
+	} else if (magAmount.toString().length < 21){
+		magAmount = Math.floor(magAmount/1e18);
+		ek = 'e';
+	} else if (magAmount.toString().length < 24){
+		magAmount = Math.floor(magAmount/1e21);
+		ek = 'f';
+	} else if (magAmount.toString().length < 27){
+		magAmount = Math.floor(magAmount/1e24);
+		ek = 'g';
+	} else if (magAmount.toString().length < 30){
+		magAmount = Math.floor(magAmount/1e21);
+		ek = 'h';
 	}
-		
-	
+
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = magAmount.toLocaleString() + ' a';
+	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek;
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
 
