@@ -55,6 +55,7 @@ function calculate() {
 	});
 	
 	console.log(Math.floor(magAmount/1e6));
+	console.log('Basamak:'+magAmount.length);
 	if (magAmount.length > 6 ) {
 		console.log('Basamak:'+magAmount.length);
 		magAmount = Math.floor(magAmount/1e6);
