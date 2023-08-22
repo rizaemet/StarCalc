@@ -41,7 +41,7 @@ function calculate() {
 
 
 	var desired = document.getElementById("target").value;
-	var MagA;
+	//var MagA;
 	var gsAmount = 0;
 	var magAmount = 0;
 	var fragmentAmount = 0;
