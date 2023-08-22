@@ -61,25 +61,25 @@ function calculate() {
 		magAmount = magAmount/1e6;
 		ek = 'a';
 	} else if (magAmount.toString().length < 12){
-		magAmount = Math.floor(magAmount/1e9);
+		magAmount = magAmount/1e9;
 		ek = 'b';
 	} else if (magAmount.toString().length < 15){
-		magAmount = Math.floor(magAmount/1e12);
+		magAmount = magAmount/1e12;
 		ek = 'c';
 	} else if (magAmount.toString().length < 18){
-		magAmount = Math.floor(magAmount/1e15);
+		magAmount = magAmount/1e15;
 		ek = 'd';
 	} else if (magAmount.toString().length < 21){
-		magAmount = Math.floor(magAmount/1e18);
+		magAmount = magAmount/1e18;
 		ek = 'e';
 	} else if (magAmount.toString().length < 24){
-		magAmount = Math.floor(magAmount/1e21);
+		magAmount = magAmount/1e21;
 		ek = 'f';
 	} else if (magAmount.toString().length < 27){
-		magAmount = Math.floor(magAmount/1e24);
+		magAmount = magAmount/1e24;
 		ek = 'g';
 	} else if (magAmount.toString().length < 30){
-		magAmount = Math.floor(magAmount/1e21);
+		magAmount = magAmount/1e21;
 		ek = 'h';
 	}
 
