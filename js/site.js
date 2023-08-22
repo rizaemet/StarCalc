@@ -54,8 +54,9 @@ function calculate() {
 		}
 	});
 
-	if (magAmount > 1e6 && magAmount < 1e9) {
-		magAmount = Math.floor(magAmount/1000000);
+	if (magAmount.length > 6 ) {
+		console.log('Elma');
+		magAmount = Math.floor(magAmount/1e6);
 	}
 		
 	
