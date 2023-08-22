@@ -41,7 +41,7 @@ function calculate() {
 
 
 	var desired = document.getElementById("target").value;
-	//var MagA;
+	var magA;
 	var gsAmount = 0;
 	var magAmount = 0;
 	var fragmentAmount = 0;
@@ -57,13 +57,13 @@ function calculate() {
 
 	if (magAmount >=1000000 && magAmount <=1000000000) {
 		magAmount = magAmount%1000000;
-		MagA = magAmount.toLocaleString()+' a';
+		magA = magAmount.toLocaleString()+' a';
 	}
 		
 	
 	
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = MagA;
+	document.getElementById("mag").innerHTML = magA;
 //	document.getElementById("mag").innerHTML = magAmount.toLocaleString();
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
