@@ -53,34 +53,44 @@ function calculate() {
 			fragmentAmount += fragmentCost(index, scrapyardMul);
 		}
 	});
+
 	
 
 	if (magAmount.toString().length < 6){
 		ek = '';
-	} else if (magAmount.toString().length < 9){
+	} else if (magAmount.toString().length <= 9){
 		magAmount = magAmount/1e6;
 		ek = 'a';
-	} else if (magAmount.toString().length < 12){
+	} else if (magAmount.toString().length <= 12){
 		magAmount = magAmount/1e9;
 		ek = 'b';
-	} else if (magAmount.toString().length < 15){
+	} else if (magAmount.toString().length <= 15){
 		magAmount = magAmount/1e12;
 		ek = 'c';
-	} else if (magAmount.toString().length < 18){
+	} else if (magAmount.toString().length <= 18){
 		magAmount = magAmount/1e15;
 		ek = 'd';
-	} else if (magAmount.toString().length < 21){
+	} else if (magAmount.toString().length <= 21){
 		magAmount = magAmount/1e18;
 		ek = 'e';
-	} else if (magAmount.toString().length < 24){
+	} else if (magAmount.toString().length <= 24){
 		magAmount = magAmount/1e21;
 		ek = 'f';
-	} else if (magAmount.toString().length < 27){
+	} else if (magAmount.toString().length <= 27){
 		magAmount = magAmount/1e24;
 		ek = 'g';
-	} else if (magAmount.toString().length < 30){
-		magAmount = magAmount/1e21;
+	} else if (magAmount.toString().length <= 30){
+		magAmount = magAmount/1e27;
 		ek = 'h';
+	} else if (magAmount.toString().length <= 33){
+		magAmount = magAmount/1e30;
+		ek = 'i';
+	} else if (magAmount.toString().length <= 36){
+		magAmount = magAmount/1e33;
+		ek = 'j';
+	} else if (magAmount.toString().length <= 39){
+		magAmount = magAmount/1e36;
+		ek = 'k';
 	}
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
