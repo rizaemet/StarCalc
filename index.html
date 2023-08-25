@@ -3,12 +3,13 @@
 <head>
   <title>StarCalc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/site-min.css" media="screen,projection" /> </head>
 
 <body>
-  <h1 class="text-center">Star Levels</h1>
-  <div class="text-center">Set all Stars:
+  <h1 class="text-center">Yıldız Seviyesi</h1>
+  <div class="text-center">Hepsini ayarla:
     <input id="setAll" type="number" placeholder="Enter level" onchange="setAll()"> </div>
   <div class="d-grid gap-3">
     <div class="container">
@@ -62,12 +63,12 @@
       </div>
     </div>
     <div class="input-group-sm">
-      <label class="text-center"> <span class="h3 w-50">Scrapyard V2 Level:</span>
+      <label class="text-center"> <span class="h3 w-30">Çöplük v2:</span>
         <input class="w-40" id="v2" type="number" placeholder="Enter level"> </label>
-      <label class="text-center"> <span class="h3 w-50">Target Star Level:</span>
+      <label class="text-center"> <span class="h3 w-30">Hedef Yıldız:</span>
         <input class="w-40" id="target" type="number" placeholder="Enter level"> </label>
       <div class="text-center" style="padding: 10px;">
-        <button class="btn btn-primary" onclick="calculate()">Submit</button>
+        <button class="btn btn-primary" onclick="calculate()">Hesapla</button>
       </div>
     </div>
     <div class="container">
@@ -85,8 +86,7 @@
     </div>
   </div>
 
-  <div style="color:white; text-align:center;">Images source <a href="https://official-scrap-2.fandom.com/">Official Scrap 2 Wiki | Fandom</a> </div>
-  <div style="color:white; text-align:center;">Forked from <a href="https://github.com/jugh3ad/StarCalc">jugh3ad/StarCalc</a> </div>
+  <div style="color:white; text-align:center;">Şuradan fork: <a href="https://github.com/jugh3ad/StarCalc">jugh3ad/StarCalc</a> </div>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/site.js"></script>
 </body>
