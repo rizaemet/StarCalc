@@ -1,15 +1,11 @@
-# jugh3ad.github.io/StarCalc/
 
-A companion app/website for the merging game Scrap Clicker 2.
+Scrap Clicker 2 oyuncuları için yardımcı uygulama.
 
-Provides the ability to calculate the resources needed to reach a specific Star level when providing:
-* Current Star Level
-* Current Scrapyard v2 Level
-* Target Star Level
+Türkçe çeviri ve mıknatıs miktarı notasyonu için [https://github.com/jugh3ad/StarCalc](https://github.com/jugh3ad/StarCalc) kaynağından fork edilmiştir.
 
-One calculated, it will provide the needed amounts of:
-* Golden Scrap
-* Magnets
-* Star Fragments
+Aşağıdaki değerleri girdiğinizde hedef Yıldız Seviyesine ulaşmak için gereken Altın Hurda, Mıknatıs ve Yıldız Parçası sayısını hesaplar:
+* Mevcut Yıldız Seviyesi
+* Mevcut Çöplük v2 Seviyesi
+* Hedef Yıldız Seviyesi
 
-To see it in action: https://jugh3ad.github.io/StarCalc/
+Kullanmak için: [https://rizaemet.github.io/StarCalc/](https://rizaemet.github.io/StarCalc)
