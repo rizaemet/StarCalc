@@ -91,10 +91,12 @@ function calculate() {
 	} else if (magAmount.toString().length <= 39){
 		magAmount = magAmount/1e36;
 		ek = 'k';
-	}
-	else if (magAmount.toString().length <= 42){
+	} else if (magAmount.toString().length <= 42){
 		magAmount = magAmount/1e39;
 		ek = 'l';
+	} else if (magAmount.toString().length <= 45){
+		magAmount = magAmount/1e39;
+		ek = 'm';
 	}
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
