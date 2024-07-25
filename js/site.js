@@ -46,6 +46,7 @@ function calculate() {
 	var magAmount = 0;
 	var fragmentAmount = 0;
 	var scrapyardMul = scrapyardModifier();
+	var ek = '';
 
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
