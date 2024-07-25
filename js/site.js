@@ -56,7 +56,7 @@ function calculate() {
 		}
 	});
 
-	
+	magAmount = Math.floor(magAmount);
 
 	if (magAmount.toString().length < 6){
 		ek = '';
