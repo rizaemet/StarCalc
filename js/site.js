@@ -58,7 +58,7 @@ function calculate() {
 	});
 
 	magAmount = Math.floor(magAmount * mltp);
-/*
+
 	if (magAmount.toString().length < 6){
 		ek = '';
 	} else if (magAmount.toString().length <= 9){
@@ -101,10 +101,10 @@ function calculate() {
 		magAmount = magAmount/1e42;
 		ek = 'm';
 	}
-*/
+
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek;
+	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek + ' ' + magAmount.toString().length;
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
 
