@@ -51,7 +51,7 @@ function calculate() {
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
 			gsAmount += gsCost(index, scrapyardMul);
-			magAmount += magnetCost(index, scrapyardMul, arch);
+			magAmount += magnetCost(index, scrapyardMul, arch1);
 			fragmentAmount += fragmentCost(index, scrapyardMul);
 		}
 	});
@@ -240,7 +240,7 @@ function magnetCost(starLevel, scrapyardMul, arch) {
 	if (starLevel >= 1760) cost *= 1.269;
 	if (starLevel >= 1810) cost *= 1.1;
 	if (starLevel >= 1860) cost *= Math.pow(1.1, Math.floor((starLevel - 1810) / 50));
-	return Math.floor((cost * 100 / (scrapyardMul + 100)) * (1 + arch));
+	return Math.floor((cost * 100 / (scrapyardMul + 100)) * (1 + arch1));
 }
 
 function fragmentCost(starLevel, scrapyardMul) {
