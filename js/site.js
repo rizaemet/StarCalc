@@ -48,7 +48,6 @@ function calculate() {
 	var fragmentAmount = 0;
 	var scrapyardMul = scrapyardModifier();
 	var ek = '';
-	var uz = 0;
 
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
@@ -59,9 +58,7 @@ function calculate() {
 	});
 
 	magAmount = magAmount * mltp;
-	uz = magAmount.toString().length;
 	
-
 	if (magAmount <= 1e6){
 		ek = '';
 	} else if (magAmount < 1e9){
@@ -70,44 +67,44 @@ function calculate() {
 	} else if (magAmount < 1e12){
 		magAmount = magAmount/1e9;
 		ek = 'b';
-	} else if (magAmount.toString().length <= 15){
+	} else if (magAmount < 1e15){
 		magAmount = magAmount/1e12;
 		ek = 'c';
-	} else if (magAmount.toString().length <= 18){
+	} else if (magAmount < 1e18){
 		magAmount = magAmount/1e15;
 		ek = 'd';
-	} else if (magAmount.toString().length <= 21){
+	} else if (magAmount < 1e21){
 		magAmount = magAmount/1e18;
 		ek = 'e';
-	} else if (magAmount.toString().length <= 24){
+	} else if (magAmount < 1e24){
 		magAmount = magAmount/1e21;
 		ek = 'f';
-	} else if (magAmount.toString().length <= 27){
+	} else if (magAmount < 1e27){
 		magAmount = magAmount/1e24;
 		ek = 'g';
-	} else if (magAmount.toString().length <= 30){
+	} else if (magAmount < 1e30){
 		magAmount = magAmount/1e27;
 		ek = 'h';
-	} else if (magAmount.toString().length <= 33){
+	} else if (magAmount < 1e33){
 		magAmount = magAmount/1e30;
 		ek = 'i';
-	} else if (magAmount.toString().length <= 36){
+	} else if (magAmount < 1e36){
 		magAmount = magAmount/1e33;
 		ek = 'j';
-	} else if (magAmount.toString().length <= 39){
+	} else if (magAmount < 1e39){
 		magAmount = magAmount/1e36;
 		ek = 'k';
-	} else if (magAmount.toString().length <= 42){
+	} else if (magAmount < 1e42){
 		magAmount = magAmount/1e39;
 		ek = 'l';
-	} else if (magAmount.toString().length <= 45){
+	} else if (magAmount < 1e45){
 		magAmount = magAmount/1e42;
 		ek = 'm';
 	}
 
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek + ' ' + uz;
+	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek;
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
 
