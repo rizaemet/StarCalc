@@ -48,6 +48,7 @@ function calculate() {
 	var fragmentAmount = 0;
 	var scrapyardMul = scrapyardModifier();
 	var ek = '';
+	var uz = 0;
 
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
@@ -58,8 +59,10 @@ function calculate() {
 	});
 
 	magAmount = Math.floor(magAmount * mltp);
+	uz = magAmount.toString().length;
+	
 
-	if (magAmount.toString().length < 6){
+	if (magAmount.toString().length <= 6){
 		ek = '';
 	} else if (magAmount.toString().length <= 9){
 		magAmount = magAmount/1e6;
@@ -104,7 +107,7 @@ function calculate() {
 
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
-	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek + ' ' + magAmount.toString().length;
+	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek + ' ' + uz;
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
 }
 
