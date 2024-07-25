@@ -52,13 +52,13 @@ function calculate() {
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
 			gsAmount += gsCost(index, scrapyardMul);
-			magAmount += magnetCost(index, scrapyardMul, arch1);
+			magAmount += magnetCost(index, scrapyardMul);
 			fragmentAmount += fragmentCost(index, scrapyardMul);
 		}
 	});
 
 	magAmount = Math.floor(magAmount * mltp);
-
+/*
 	if (magAmount.toString().length < 6){
 		ek = '';
 	} else if (magAmount.toString().length <= 9){
@@ -101,6 +101,7 @@ function calculate() {
 		magAmount = magAmount/1e42;
 		ek = 'm';
 	}
+*/
 
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
 	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek;
@@ -153,7 +154,7 @@ function scrapyardModifier() {
 	return modifier - 1;
 }
 
-function magnetCost(starLevel, scrapyardMul, arch1) {
+function magnetCost(starLevel, scrapyardMul) {
 	var cost = 250 * (starLevel - 10) + 1000; //adjust for first 10 stars
 	if (starLevel >= 12) cost *= 0.98;
 	if (starLevel >= 13) cost *= 0.98;
