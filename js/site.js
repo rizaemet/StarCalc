@@ -22,10 +22,15 @@ function calculate() {
 		isValid = true;
 		return true;
 	});
+	
 	if (!isValid) {
 		return;
 	}
 
+	if (document.getElementById("arch").value > 5) {
+		document.getElementById("arch").value = 5;
+	}
+	
 	var stars = [
 		document.getElementById("inpStar1").value,
 		document.getElementById("inpStar2").value,
