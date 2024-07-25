@@ -41,7 +41,7 @@ function calculate() {
 
 
 	var desired = document.getElementById("target").value;
-	var arch = document.getElementById("arch").value;
+	var arch1 = document.getElementById("arch").value;
 	var gsAmount = 0;
 	var magAmount = 0;
 	var fragmentAmount = 0;
@@ -240,7 +240,7 @@ function magnetCost(starLevel, scrapyardMul, arch) {
 	if (starLevel >= 1760) cost *= 1.269;
 	if (starLevel >= 1810) cost *= 1.1;
 	if (starLevel >= 1860) cost *= Math.pow(1.1, Math.floor((starLevel - 1810) / 50));
-	return Math.floor((cost * 100 / (scrapyardMul + 100)) * (1 + arch);
+	return Math.floor((cost * 100 / (scrapyardMul + 100)) * (1 + arch));
 }
 
 function fragmentCost(starLevel, scrapyardMul) {
