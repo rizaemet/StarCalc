@@ -1,4 +1,4 @@
-var inputs = ["inpStar1", "inpStar2", "inpStar3", "inpStar4", "inpStar5", "inpStar6", "inpStar7", "inpStar8", "inpStar9", "inpStar10", "v2", "target"];
+var inputs = ["inpStar1", "inpStar2", "inpStar3", "inpStar4", "inpStar5", "inpStar6", "inpStar7", "inpStar8", "inpStar9", "inpStar10", "arch", "v2", "target"];
 
 function setAll() {
 	inputs.forEach(input => {
@@ -41,6 +41,7 @@ function calculate() {
 
 
 	var desired = document.getElementById("target").value;
+	var arch = document.getElementById("arch").value;
 	var gsAmount = 0;
 	var magAmount = 0;
 	var fragmentAmount = 0;
@@ -49,7 +50,7 @@ function calculate() {
 	stars.forEach((star) => {
 		for (let index = Number(star); index < Number(desired); index++) {
 			gsAmount += gsCost(index, scrapyardMul);
-			magAmount += magnetCost(index, scrapyardMul);
+			magAmount += magnetCost(index, scrapyardMul, arch);
 			fragmentAmount += fragmentCost(index, scrapyardMul);
 		}
 	});
@@ -150,7 +151,7 @@ function scrapyardModifier() {
 	return modifier - 1;
 }
 
-function magnetCost(starLevel, scrapyardMul) {
+function magnetCost(starLevel, scrapyardMul, arch) {
 	var cost = 250 * (starLevel - 10) + 1000; //adjust for first 10 stars
 	if (starLevel >= 12) cost *= 0.98;
 	if (starLevel >= 13) cost *= 0.98;
@@ -238,7 +239,7 @@ function magnetCost(starLevel, scrapyardMul) {
 	if (starLevel >= 1760) cost *= 1.269;
 	if (starLevel >= 1810) cost *= 1.1;
 	if (starLevel >= 1860) cost *= Math.pow(1.1, Math.floor((starLevel - 1810) / 50));
-	return Math.floor(cost * 100 / (scrapyardMul + 100));
+	return Math.floor((cost * 100 / (scrapyardMul + 100)) * (1 + arch);
 }
 
 function fragmentCost(starLevel, scrapyardMul) {
