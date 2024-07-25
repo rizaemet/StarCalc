@@ -152,7 +152,7 @@ function scrapyardModifier() {
 	return modifier - 1;
 }
 
-function magnetCost(starLevel, scrapyardMul, arch) {
+function magnetCost(starLevel, scrapyardMul, arch1) {
 	var cost = 250 * (starLevel - 10) + 1000; //adjust for first 10 stars
 	if (starLevel >= 12) cost *= 0.98;
 	if (starLevel >= 13) cost *= 0.98;
