@@ -13,7 +13,7 @@ function setAll() {
 function calculate() {
 	var isValid = true;
 	inputs.every(input => {
-		if (document.getElementById(input).value <= 0) {
+		if (document.getElementById(input).value < 0) {
 			document.getElementById(input).select();
 			document.getElementById(input).classList.add("red");
 			isValid = false;
