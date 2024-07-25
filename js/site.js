@@ -62,12 +62,12 @@ function calculate() {
 	uz = magAmount.toString().length;
 	
 
-	if (magAmount.toString().length <= 6){
+	if (magAmount <= 1e6){
 		ek = '';
-	} else if (magAmount <= 1e10){
+	} else if (magAmount < 1e9){
 		magAmount = magAmount/1e6;
 		ek = 'a';
-	} else if (magAmount.toString().length <= 12){
+	} else if (magAmount < 1e12){
 		magAmount = magAmount/1e9;
 		ek = 'b';
 	} else if (magAmount.toString().length <= 15){
