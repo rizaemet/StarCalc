@@ -95,7 +95,7 @@ function calculate() {
 		magAmount = magAmount/1e39;
 		ek = 'l';
 	} else if (magAmount.toString().length <= 45){
-		magAmount = magAmount/1e39;
+		magAmount = magAmount/1e42;
 		ek = 'm';
 	}
 
