@@ -58,7 +58,7 @@ function calculate() {
 		}
 	});
 
-	magAmount = magAmount * mltp;
+	//magAmount = magAmount * mltp;
 	uz = magAmount.toString().length;
 	
 
