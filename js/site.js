@@ -58,13 +58,13 @@ function calculate() {
 		}
 	});
 
-	//magAmount = magAmount * mltp;
+	magAmount = magAmount * mltp;
 	uz = magAmount.toString().length;
 	
 
 	if (magAmount.toString().length <= 6){
 		ek = '';
-	} else if (magAmount.toString().length <= 9){
+	} else if (magAmount <= 1e10){
 		magAmount = magAmount/1e6;
 		ek = 'a';
 	} else if (magAmount.toString().length <= 12){
