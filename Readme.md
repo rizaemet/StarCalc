@@ -6,7 +6,7 @@ Türkçe çeviri ve mıknatıs miktarı harf notasyonu için [https://github.com
 Aşağıdaki değerleri girdiğinizde hedef Yıldız Seviyesine ulaşmak için gereken Altın Hurda, Mıknatıs ve Yıldız Parçası sayısını hesaplar:
 * Mevcut Yıldız Seviyesi
 * Yıldız Maliyeti (Başarılar) (Oyunun 11.4 sürümüyle gelen Başarılar bölümündeki maliyet düşürme oranı)
-* Yıldız Maliueti (Ustalık) (Oyunun 11.5 sürümüyle gelen Ustalık bölümündeki maliyet düşürme çarpanı)
+* Yıldız Maliyeti (Ustalık) (Oyunun 11.5 sürümüyle gelen Ustalık bölümündeki maliyet düşürme çarpanı)
 * Mevcut Çöplük v2 Seviyesi
 * Hedef Yıldız Seviyesi
 
