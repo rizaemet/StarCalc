@@ -1,5 +1,52 @@
 var inputs = ["inpStar1", "inpStar2", "inpStar3", "inpStar4", "inpStar5", "inpStar6", "inpStar7", "inpStar8", "inpStar9", "inpStar10", "arch", "master17", "v2", "target"];
 
+window.onload = checkLocalStorage();
+
+function onRememberMeChange(){
+	if (document.getElementById("rememberMe").checked) 
+	{
+		setLocalStorage()
+	}
+	else
+	{
+		localStorage.clear();
+	}
+}
+
+function setLocalStorage() {
+	inputs.forEach(input => {
+		localStorage.setItem(input,document.getElementById(input).value);
+	});
+	inpStars.forEach(input => {
+		localStorage.setItem(input,document.getElementById(input).value);
+	});
+	localStorage.setItem("rememberMe",document.getElementById("rememberMe").checked);
+}
+
+function checkLocalStorage(){
+	var cond = JSON.parse(localStorage.getItem("rememberMe"));
+	if (!cond){
+		localStorage.clear()
+		calculate();
+		return;
+	}
+	document.getElementById("rememberMe").checked = JSON.parse(localStorage.getItem("rememberMe"));
+	inpStars.forEach(input => {
+		if (Number(localStorage.getItem(input))) 
+		{
+		  document.getElementById(input).value = localStorage.getItem(input);
+		}
+	});
+	inputs.forEach(input => {
+		if (Number(localStorage.getItem(input))) 
+		{
+		  document.getElementById(input).value = localStorage.getItem(input);
+		}
+	});
+	calculate();
+}
+
+
 function setAll() {
 	inputs.forEach(input => {
 		if (input.includes("inpStar")) {
@@ -114,6 +161,8 @@ function calculate() {
 	document.getElementById("gs").innerHTML = gsAmount.toLocaleString();
 	document.getElementById("mag").innerHTML = magAmount.toLocaleString()+ ' ' + ek;
 	document.getElementById("fragment").innerHTML = fragmentAmount.toLocaleString();
+
+	if ( document.getElementById("rememberMe").checked ) setLocalStorage();
 }
 
 function isNumber(event) {
