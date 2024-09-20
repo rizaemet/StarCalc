@@ -74,6 +74,8 @@
         <input class="w-30" id="v2" type="number" placeholder=""> </label>
       <label class="text-center"> <span class="h3 w-30">Hedef Yıldız:</span>
         <input class="w-30" id="target" type="number" placeholder="" onkeyup="calculate()" onchange="calculate()"> </label>
+      <div class="text-center" ><span id = "lblSettings">Ayarlarımı Hatıla: </span>
+        <input id="rememberMe" type="checkbox" onchange="onRememberMeChange()"></div>
       <div class="text-center" style="padding: 10px;">
         <button class="btn btn-primary" onclick="calculate()">Hesapla</button>
       </div>
