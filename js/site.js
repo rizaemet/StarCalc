@@ -1,4 +1,4 @@
-var inputs = ["inpStar1", "inpStar2", "inpStar3", "inpStar4", "inpStar5", "inpStar6", "inpStar7", "inpStar8", "inpStar9", "inpStar10", "arch", "v2", "target"];
+var inputs = ["inpStar1", "inpStar2", "inpStar3", "inpStar4", "inpStar5", "inpStar6", "inpStar7", "inpStar8", "inpStar9", "inpStar10", "arch", "master17", "v2", "target"];
 
 function setAll() {
 	inputs.forEach(input => {
@@ -47,6 +47,7 @@ function calculate() {
 
 	var desired = document.getElementById("target").value;
 	var arch1 = document.getElementById("arch").value;
+	var master171 = document.getElementById("master17").value;
 	var mltp = 1 - (arch1 / 100);
 	var gsAmount = 0;
 	var magAmount = 0;
@@ -62,7 +63,9 @@ function calculate() {
 		}
 	});
 
-	magAmount = magAmount * mltp;
+	magAmount = magAmount * mltp * master171;
+	gsAmount = gsAmount * mltp * master171;
+	fragmentAmount = fragmentAmount * mltp * master171;
 	
 	if (magAmount <= 1e6){
 		ek = '';
