@@ -27,8 +27,8 @@ function calculate() {
 		return;
 	}
 
-	if (document.getElementById("arch").value > 5) {
-		document.getElementById("arch").value = 5;
+	if (document.getElementById("arch").value > 20) {
+		document.getElementById("arch").value = 20;
 	}
 	
 	var stars = [
