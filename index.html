@@ -1,101 +1,106 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="tr">
 
 <head>
-  <title>StarCalc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="css/site.css" media="screen,projection" /> </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StarCalc · Scrap Clicker 2 Yıldız Hesaplayıcı</title>
+  <meta name="description" content="Scrap Clicker 2 için yıldız yükseltme maliyeti hesaplayıcı: Altın Hurda, Mıknatıs ve Yıldız Parçası.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#12141c">
+  <link rel="icon" type="image/png" href="imgs/Star.png">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
 
 <body>
-  <h2 class="text-center">Yıldız Seviyesi</h2>
-  <div class="text-center">Hepsini ayarla:
-    <input id="setAll" type="number" placeholder="Mevcut seviye" onkeyup="setAll()" onchange="setAll()"> </div>
-  <div class="d-grid gap-3">
-    <div class="container">
-      <div class="row d-flex justify-content-evenly">
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar1" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar2" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
+  <main class="app">
+    <header class="app-header">
+      <img src="imgs/Star.png" alt="" width="48" height="48">
+      <div>
+        <h1>StarCalc</h1>
+        <p>Scrap Clicker 2 yıldız yükseltme maliyeti</p>
       </div>
-      <div class="row d-flex justify-content-evenly">
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar3" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar4" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar5" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-evenly">
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar6" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar7" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar8" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-evenly">
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar9" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-        <div class="col starContainer">
-          <label class="text-center"> <img class="starIcon" alt="Star">
-            <input class="starInput centered" id="inpStar10" type="text" placeholder="99999" maxlength="5" onkeypress="isNumber(event)"> </label>
-        </div>
-      </div>
-    </div>
-    <div class="input-group-sm">
-      
-      <label class="text-center"> <span class="h3 w-30">Yıldız maliyeti (Başarılar): -%</span>
-        <input class="w-30" id="arch" type="number" placeholder="" min=0 max=20 step=0.1> </label>
+    </header>
 
-      <label class="text-center"> <span class="h3 w-30">Yıldız maliyeti (Ustalık): x</span>
-        <input class="w-30" id="master17" type="number" placeholder="" value=1 min=0 max=1 step=0.01> </label>
-      
-      <label class="text-center"> <span class="h3 w-30">Çöplük v2:</span>
-        <input class="w-30" id="v2" type="number" placeholder=""> </label>
-      <label class="text-center"> <span class="h3 w-30">Hedef Yıldız:</span>
-        <input class="w-30" id="target" type="number" placeholder="" onkeyup="calculate()" onchange="calculate()"> </label>
-      <div class="text-center" style="padding: 10px;">
-        <button class="btn btn-primary" onclick="calculate()">Hesapla</button>
+    <section class="card" aria-labelledby="starsTitle">
+      <div class="card-head">
+        <h2 id="starsTitle">Yıldız Seviyeleri</h2>
+        <label class="inline-field">
+          <span>Hepsini ayarla</span>
+          <input id="setAll" type="text" inputmode="numeric" autocomplete="off" placeholder="Seviye">
+        </label>
       </div>
-    </div>
-    <div class="container">
-      <div class="flex-column">
-        <div class="flex-row"> <img class="gsIcon" alt="Golden Scrap">
-          <label class="text-center"> <span class="h3 dispInput" id="gs">0</span> </label>
+      <div class="star-grid" id="starGrid"></div>
+      <template id="starTemplate">
+        <label class="star">
+          <span class="star-index"></span>
+          <input type="text" inputmode="numeric" autocomplete="off" placeholder="0" maxlength="5">
+        </label>
+      </template>
+    </section>
+
+    <section class="card" aria-labelledby="settingsTitle">
+      <h2 id="settingsTitle">Ayarlar</h2>
+      <div class="fields">
+        <label class="field">
+          <span>Başarılar indirimi</span>
+          <span class="input-wrap" data-unit="%">
+            <input id="arch" type="number" inputmode="decimal" min="0" max="20" step="0.1" placeholder="0">
+          </span>
+          <small>0 – 20 arası</small>
+        </label>
+        <label class="field">
+          <span>Ustalık çarpanı</span>
+          <span class="input-wrap" data-unit="×">
+            <input id="master17" type="number" inputmode="decimal" min="0" max="1" step="0.01" placeholder="1">
+          </span>
+          <small>0 – 1 arası</small>
+        </label>
+        <label class="field">
+          <span>Çöplük v2 seviyesi</span>
+          <input id="v2" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+        </label>
+        <label class="field field-accent">
+          <span>Hedef yıldız</span>
+          <input id="target" type="number" inputmode="numeric" min="0" step="1" placeholder="Örn. 500">
+        </label>
+      </div>
+    </section>
+
+    <section class="card results" aria-labelledby="resultsTitle">
+      <div class="card-head">
+        <h2 id="resultsTitle">Gerekli Kaynaklar</h2>
+        <button id="reset" type="button" class="btn-ghost">Sıfırla</button>
+      </div>
+      <p id="summary" class="summary" aria-live="polite"></p>
+      <div class="result-grid">
+        <div class="result">
+          <img src="imgs/GoldenScrap.png" alt="" width="40" height="40">
+          <div>
+            <span class="result-label">Altın Hurda</span>
+            <output id="gs">0</output>
+          </div>
         </div>
-        <div class="flex-row"> <img class="magIcon" alt="Magnets">
-          <label class="text-center"> <span class="h3 dispInput" id="mag">0</span> </label>
+        <div class="result">
+          <img src="imgs/magnet.png" alt="" width="40" height="40">
+          <div>
+            <span class="result-label">Mıknatıs</span>
+            <output id="mag">0</output>
+          </div>
         </div>
-        <div class="flex-row"> <img class="fragmentIcon" alt="Fragments">
-          <label class="text-center"> <span class="h3 dispInput" id="fragment">0</span> </label>
+        <div class="result">
+          <img src="imgs/starfragment.png" alt="" width="40" height="40">
+          <div>
+            <span class="result-label">Yıldız Parçası</span>
+            <output id="fragment">0</output>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-<br />
-  <div style="color:white; text-align:center;">Forked from <a href="https://github.com/jugh3ad/StarCalc">jugh3ad/StarCalc</a> </div>
-  <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-  <script type="text/javascript" src="js/site.js"></script>
+      <p class="hint">Tam değeri görmek için sayının üzerine gelin. Boş bırakılan yıldızlar hesaba katılmaz.</p>
+    </section>
+
+  </main>
 </body>
 
 </html>
